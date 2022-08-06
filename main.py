@@ -53,13 +53,13 @@ class CustomClient(discord.Client):
             await message.channel.send(response)
 
     def check_role(self, member: discord.member, role_name: str):
-        for role in member.roles():
-            if role.name.lower() is role_name:
-                print(f"{member.__name__} was found to have {role_name} role!")
+        for role in member.roles:
+            if role.name.lower() == role_name.lower():
+                print(f"{member} was found to have {role_name} role!")
                 return True
             
         # If none of those roles match, return false.
-        print(f"{member.__name__} does not have {role_name} role!")
+        print(f"{member} does not have {role_name} role!")
         return False
             
         
