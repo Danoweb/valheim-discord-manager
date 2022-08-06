@@ -9,6 +9,8 @@ Manage a Valheim game server from Discord
 - `STATUS_FILE` - The Status file name as served from the status host (default: `status.json`)
 - `SUDO_PASSWORD` - The password to use with sudo when making the docker command call on the system.
 
+# Command Authorization
+The bot will look for user's enrolled with the name of the role in the `PERMITTED_ROLE` global constant.
 ## Script as Startup
 ```
 [Unit]
